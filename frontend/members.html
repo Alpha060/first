@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Members - Tech Club</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/members.css">
+    <script defer src="js/script.js"></script>
+    <script defer src="js/members.js"></script>
+</head>
+<body>
+    <div id="loading" class="loading"></div>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#events">Events</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="forum.html">Forum</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero">
+        <div class="hero-content animate-on-scroll">
+            <h1>Meet Our Team</h1>
+            <p>The minds behind our innovative projects.</p>
+        </div>
+    </header>
+
+    <!-- Search and Filter Section -->
+    <section class="member-filter">
+        <input type="text" id="member-search" placeholder="Search members...">
+        <select id="role-filter">
+            <option value="all">All Roles</option>
+            <option value="AI Engineer">AI Engineers</option>
+            <option value="Web Developer">Web Developers</option>
+            <option value="Cybersecurity Expert">Cybersecurity Experts</option>
+        </select>
+    </section>
+
+    <!-- Members Section -->
+    <section class="members">
+        <h2 class="animate-on-scroll">Our Members</h2>
+        <div class="members-container">
+            <div class="member-card animate-on-scroll" data-role="AI Engineer">
+                <div class="member-image">
+                    <img src="assets/images/member1.jpg" alt="John Doe">
+                    <div class="member-overlay">
+                        <p>Specializes in Deep Learning and Computer Vision</p>
+                    </div>
+                </div>
+                <h3>John Doe</h3>
+                <p>AI Engineer</p>
+                <div class="member-skills">
+                    <span>Python</span>
+                    <span>TensorFlow</span>
+                    <span>PyTorch</span>
+                </div>
+                <div class="member-links">
+                    <a href="#" class="btn">GitHub</a>
+                    <a href="#" class="btn">LinkedIn</a>
+                </div>
+                <button class="contact-btn btn">Contact Me</button>
+            </div>
+
+            <div class="member-card animate-on-scroll" data-role="Web Developer">
+                <div class="member-image">
+                    <img src="assets/images/member2.jpg" alt="Jane Smith">
+                    <div class="member-overlay">
+                        <p>Full-stack developer with 5 years of experience</p>
+                    </div>
+                </div>
+                <h3>Jane Smith</h3>
+                <p>Web Developer</p>
+                <div class="member-skills">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+                </div>
+                <div class="member-links">
+                    <a href="#" class="btn">GitHub</a>
+                    <a href="#" class="btn">LinkedIn</a>
+                </div>
+                <button class="contact-btn btn">Contact Me</button>
+            </div>
+
+            <div class="member-card animate-on-scroll" data-role="Cybersecurity Expert">
+                <div class="member-image">
+                    <img src="assets/images/member3.jpg" alt="Michael Brown">
+                    <div class="member-overlay">
+                        <p>Certified ethical hacker and security consultant</p>
+                    </div>
+                </div>
+                <h3>Michael Brown</h3>
+                <p>Cybersecurity Expert</p>
+                <div class="member-skills">
+                    <span>Penetration Testing</span>
+                    <span>Network Security</span>
+                    <span>CISSP</span>
+                </div>
+                <div class="member-links">
+                    <a href="#" class="btn">GitHub</a>
+                    <a href="#" class="btn">LinkedIn</a>
+                </div>
+                <button class="contact-btn btn">Contact Me</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Contact Member</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tech Club. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">Twitter</a> | <a href="#">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>

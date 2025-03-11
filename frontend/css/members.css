@@ -1,0 +1,198 @@
+/* Members Filter */
+.member-filter {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.member-filter input,
+.member-filter select {
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #222;
+    color: white;
+    min-width: 200px;
+}
+
+/* Members Section */
+.members {
+    padding: 50px 20px;
+}
+
+.members-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.member-card {
+    background: #1a1a2e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,170,255,0.2);
+}
+
+.member-image {
+    position: relative;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.member-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.member-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+}
+
+.member-image:hover .member-overlay {
+    opacity: 1;
+}
+
+.member-image:hover img {
+    transform: scale(1.1);
+}
+
+.member-card h3 {
+    color: #00ffcc;
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.member-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.member-skills span {
+    background: #2a2a4e;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: #00ffcc;
+}
+
+.member-links {
+    margin: 15px 0;
+}
+
+.member-links .btn {
+    margin: 0 5px;
+    font-size: 0.9rem;
+}
+
+.contact-btn {
+    width: 100%;
+    margin-top: 10px;
+    background: #00ffcc;
+}
+
+.contact-btn:hover {
+    background: #00ddb3;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #1a1a2e;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-modal:hover {
+    color: #00ffcc;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #222;
+    color: white;
+}
+
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .member-filter input,
+    .member-filter select {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .member-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}

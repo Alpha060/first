@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Tech Club</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <script defer src="js/script.js"></script>
+    <script defer src="js/blog.js"></script>
+</head>
+<body>
+    <div id="loading" class="loading"></div>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#events">Events</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="forum.html">Forum</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero">
+        <div class="hero-content animate-on-scroll">
+            <h1>Tech Club Blog</h1>
+            <p>Insights, Tutorials, and the Latest in Tech.</p>
+        </div>
+    </header>
+
+    <!-- Search & Filter -->
+    <section class="blog-filter">
+        <div class="filter-container">
+            <input type="text" id="search" placeholder="Search articles...">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="AI">AI & Machine Learning</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Cybersecurity">Cybersecurity</option>
+                <option value="Mobile">Mobile Development</option>
+                <option value="Cloud">Cloud Computing</option>
+            </select>
+            <select id="sort-filter">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="popular">Most Popular</option>
+            </select>
+        </div>
+        <div class="tag-filter">
+            <span class="tag active" data-tag="all">All</span>
+            <span class="tag" data-tag="tutorial">Tutorials</span>
+            <span class="tag" data-tag="news">News</span>
+            <span class="tag" data-tag="opinion">Opinion</span>
+            <span class="tag" data-tag="guide">Guides</span>
+        </div>
+    </section>
+
+    <!-- Featured Posts -->
+    <section class="featured-posts">
+        <h2 class="animate-on-scroll">Featured Articles</h2>
+        <div class="featured-container">
+            <article class="featured-post animate-on-scroll" data-category="AI" data-tags="tutorial,guide">
+                <div class="post-image">
+                    <img src="assets/images/ai-ml.jpg" alt="AI and Machine Learning">
+                    <div class="post-overlay">
+                        <span class="category">AI & Machine Learning</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h3>Deep Learning: A Comprehensive Guide</h3>
+                    <p class="excerpt">Explore the fundamentals of deep learning and neural networks in this comprehensive guide...</p>
+                    <div class="post-meta">
+                        <span class="author">By John Doe</span>
+                        <span class="date">March 15, 2025</span>
+                        <span class="read-time">15 min read</span>
+                    </div>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="blog-container">
+        <div class="posts-grid">
+            <article class="blog-post animate-on-scroll" data-category="Web Development" data-tags="tutorial">
+                <div class="post-image">
+                    <img src="assets/images/web-dev.jpg" alt="Web Development">
+                    <div class="post-overlay">
+                        <span class="category">Web Development</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h3>Modern Web Development Practices</h3>
+                    <p class="excerpt">Learn about the latest trends and best practices in modern web development...</p>
+                    <div class="post-meta">
+                        <span class="author">By Jane Smith</span>
+                        <span class="date">March 14, 2025</span>
+                        <span class="read-time">10 min read</span>
+                    </div>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-post animate-on-scroll" data-category="Cybersecurity" data-tags="guide">
+                <div class="post-image">
+                    <img src="assets/images/security.jpg" alt="Cybersecurity">
+                    <div class="post-overlay">
+                        <span class="category">Cybersecurity</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <h3>Essential Cybersecurity Practices</h3>
+                    <p class="excerpt">Discover the key practices to keep your systems and data secure...</p>
+                    <div class="post-meta">
+                        <span class="author">By Michael Brown</span>
+                        <span class="date">March 13, 2025</span>
+                        <span class="read-time">12 min read</span>
+                    </div>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Load More Button -->
+        <button id="load-more" class="btn">Load More Articles</button>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="newsletter">
+        <div class="newsletter-content animate-on-scroll">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for the latest tech insights and tutorials.</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tech Club. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">Twitter</a> | <a href="#">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>

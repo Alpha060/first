@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum - Tech Club</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/forum.css">
+    <script defer src="js/script.js"></script>
+    <script defer src="js/forum.js"></script>
+</head>
+<body>
+    <div id="loading" class="loading"></div>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="index.html#events">Events</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="forum.html">Forum</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero">
+        <div class="hero-content animate-on-scroll">
+            <h1>Tech Club Forum</h1>
+            <p>Discuss, Learn, and Share Knowledge.</p>
+        </div>
+    </header>
+
+    <!-- Forum Categories -->
+    <section class="forum-categories">
+        <h2 class="animate-on-scroll">Categories</h2>
+        <div class="categories-container">
+            <div class="category-card" data-category="general">
+                <h3>General Discussion</h3>
+                <p>5 topics • 20 posts</p>
+            </div>
+            <div class="category-card" data-category="programming">
+                <h3>Programming</h3>
+                <p>8 topics • 35 posts</p>
+            </div>
+            <div class="category-card" data-category="ai">
+                <h3>AI & Machine Learning</h3>
+                <p>3 topics • 12 posts</p>
+            </div>
+            <div class="category-card" data-category="cybersecurity">
+                <h3>Cybersecurity</h3>
+                <p>4 topics • 15 posts</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Discussion Form -->
+    <section class="new-discussion">
+        <h2 class="animate-on-scroll">Start a Discussion</h2>
+        <div class="form-container">
+            <select id="discussion-category" required>
+                <option value="">Select Category</option>
+                <option value="general">General Discussion</option>
+                <option value="programming">Programming</option>
+                <option value="ai">AI & Machine Learning</option>
+                <option value="cybersecurity">Cybersecurity</option>
+            </select>
+            <input type="text" id="discussion-title" placeholder="Enter discussion title" required>
+            <div class="rich-text-editor">
+                <div class="editor-toolbar">
+                    <button type="button" data-command="bold"><b>B</b></button>
+                    <button type="button" data-command="italic"><i>I</i></button>
+                    <button type="button" data-command="underline"><u>U</u></button>
+                    <button type="button" data-command="code">Code</button>
+                    <button type="button" data-command="link">Link</button>
+                </div>
+                <div id="discussion-content" class="editor-content" contenteditable="true" placeholder="Write your question or topic..."></div>
+            </div>
+            <div class="form-actions">
+                <button type="button" id="preview-btn" class="btn">Preview</button>
+                <button type="button" id="post-discussion" class="btn">Post Discussion</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forum Threads -->
+    <section class="forum-container">
+        <div class="forum-header">
+            <h2 class="animate-on-scroll">Recent Discussions</h2>
+            <div class="forum-filters">
+                <input type="text" id="search-threads" placeholder="Search discussions...">
+                <select id="filter-category">
+                    <option value="all">All Categories</option>
+                    <option value="general">General Discussion</option>
+                    <option value="programming">Programming</option>
+                    <option value="ai">AI & Machine Learning</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                </select>
+                <select id="sort-threads">
+                    <option value="newest">Newest First</option>
+                    <option value="active">Most Active</option>
+                    <option value="replies">Most Replies</option>
+                </select>
+            </div>
+        </div>
+        <div id="forum-threads">
+            <!-- Threads will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Preview Modal -->
+    <div id="preview-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Preview Your Post</h2>
+            <div id="preview-content"></div>
+            <button type="button" class="btn" id="edit-post">Edit Post</button>
+            <button type="button" class="btn" id="confirm-post">Confirm & Post</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tech Club. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">Twitter</a> | <a href="#">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>
